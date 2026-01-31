@@ -12,6 +12,11 @@ class GameViewModel: ObservableObject {
     @Published var isGameOver = false
     @Published var isGameWon = false
     
+    // Power-ups
+    @Published var hintsRemaining = 3
+    @Published var timeBoostsRemaining = 2
+    @Published var isPowerUpActive = false
+    
     private var timer: Timer?
     
     var gridSize: Int {
@@ -24,6 +29,11 @@ class GameViewModel: ObservableObject {
         isGameOver = false
         isGameWon = false
         timeRemaining = mode.timeLimit
+        
+        // Reset power-ups based on mode
+        hintsRemaining = mode == .easy ? 3 : (mode == .medium ? 2 : 1)
+        timeBoostsRemaining = mode == .easy ? 2 : 1
+        
         setupTiles()
         startTimer()
     }
@@ -123,5 +133,41 @@ class GameViewModel: ObservableObject {
         firstSelectedIndex = nil
         isGameOver = false
         isGameWon = false
+    }
+    
+    // Power-up Actions
+    func useHint() {
+        guard hintsRemaining > 0 && !isChecking && !isGameOver && !isPowerUpActive else { return }
+        
+        hintsRemaining -= 1
+        isPowerUpActive = true
+        
+        // Save current revealed states
+        let previousRevealed = tiles.map { $0.isRevealed }
+        
+        // Reveal all
+        for i in 0..<tiles.count {
+            if !tiles[i].isMatched {
+                tiles[i].isRevealed = true
+            }
+        }
+        
+        // Hide after 1.5 seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            guard let self = self else { return }
+            for i in 0..<self.tiles.count {
+                if !self.tiles[i].isMatched {
+                    self.tiles[i].isRevealed = previousRevealed[i]
+                }
+            }
+            self.isPowerUpActive = false
+        }
+    }
+    
+    func useTimeBoost() {
+        guard timeBoostsRemaining > 0 && !isGameOver else { return }
+        
+        timeBoostsRemaining -= 1
+        timeRemaining += 15 // Add 15 seconds
     }
 }

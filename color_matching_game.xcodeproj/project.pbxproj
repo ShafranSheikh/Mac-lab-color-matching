@@ -6,11 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		7758FCF32F2DCC3B00A1424E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77B56C4F2F24964C00F082DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77B56C562F24964C00F082DE;
+			remoteInfo = color_matching_game;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		7758FCEF2F2DCC3B00A1424E /* color_matching_gameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = color_matching_gameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B56C572F24964C00F082DE /* color_matching_game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = color_matching_game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		7758FCF02F2DCC3B00A1424E /* color_matching_gameTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = color_matching_gameTests;
+			sourceTree = "<group>";
+		};
 		77B56C592F24964C00F082DE /* color_matching_game */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = color_matching_game;
@@ -19,6 +35,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7758FCEC2F2DCC3B00A1424E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77B56C542F24964C00F082DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				77B56C592F24964C00F082DE /* color_matching_game */,
+				7758FCF02F2DCC3B00A1424E /* color_matching_gameTests */,
 				77B56C582F24964C00F082DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				77B56C572F24964C00F082DE /* color_matching_game.app */,
+				7758FCEF2F2DCC3B00A1424E /* color_matching_gameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +73,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7758FCEE2F2DCC3B00A1424E /* color_matching_gameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7758FCF52F2DCC3B00A1424E /* Build configuration list for PBXNativeTarget "color_matching_gameTests" */;
+			buildPhases = (
+				7758FCEB2F2DCC3B00A1424E /* Sources */,
+				7758FCEC2F2DCC3B00A1424E /* Frameworks */,
+				7758FCED2F2DCC3B00A1424E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7758FCF42F2DCC3B00A1424E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7758FCF02F2DCC3B00A1424E /* color_matching_gameTests */,
+			);
+			name = color_matching_gameTests;
+			packageProductDependencies = (
+			);
+			productName = color_matching_gameTests;
+			productReference = 7758FCEF2F2DCC3B00A1424E /* color_matching_gameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		77B56C562F24964C00F082DE /* color_matching_game */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77B56C622F24964D00F082DE /* Build configuration list for PBXNativeTarget "color_matching_game" */;
@@ -80,6 +128,10 @@
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					7758FCEE2F2DCC3B00A1424E = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 77B56C562F24964C00F082DE;
+					};
 					77B56C562F24964C00F082DE = {
 						CreatedOnToolsVersion = 26.2;
 					};
@@ -100,11 +152,19 @@
 			projectRoot = "";
 			targets = (
 				77B56C562F24964C00F082DE /* color_matching_game */,
+				7758FCEE2F2DCC3B00A1424E /* color_matching_gameTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7758FCED2F2DCC3B00A1424E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77B56C552F24964C00F082DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +175,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7758FCEB2F2DCC3B00A1424E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77B56C532F24964C00F082DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +191,65 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7758FCF42F2DCC3B00A1424E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77B56C562F24964C00F082DE /* color_matching_game */;
+			targetProxy = 7758FCF32F2DCC3B00A1424E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		7758FCF62F2DCC3B00A1424E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shafran-mac-lab.color-matching-gameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/color_matching_game.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/color_matching_game";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		7758FCF72F2DCC3B00A1424E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "shafran-mac-lab.color-matching-gameTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/color_matching_game.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/color_matching_game";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
 		77B56C602F24964D00F082DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -309,6 +434,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7758FCF52F2DCC3B00A1424E /* Build configuration list for PBXNativeTarget "color_matching_gameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7758FCF62F2DCC3B00A1424E /* Debug */,
+				7758FCF72F2DCC3B00A1424E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		77B56C522F24964C00F082DE /* Build configuration list for PBXProject "color_matching_game" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
