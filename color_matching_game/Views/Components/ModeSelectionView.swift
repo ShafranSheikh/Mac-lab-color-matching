@@ -20,7 +20,7 @@ struct ModeSelectionView: View {
                     Text("Select your level of mastery")
                         .font(.subheadline)
                         .foregroundColor(.white.opacity(0.7))
-                        .letterSpacing(2)
+                        .kerning(2)
                 }
                 .padding(.top, 40)
                 
